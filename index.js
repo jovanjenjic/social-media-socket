@@ -1,6 +1,14 @@
-const io = require("socket.io")(8900, {
+let port = process.env.PORT;
+let frontPort = "https://social-media-frontend-example.herokuapp.com/";
+
+if (port == null || port == "") {
+  port = 8900;
+  frontPort = "http://localhost:3000";
+}
+
+const io = require("socket.io")(port, {
   cors: {
-    origin: "http://localhost:3000"
+    origin: frontPort
   }
 });
 
