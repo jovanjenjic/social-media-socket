@@ -1,5 +1,5 @@
 let port = process.env.PORT;
-let frontPort = "https://social-media-frontend-example.herokuapp.com/";
+let frontPort = "https://social-media-frontend-example.herokuapp.com";
 
 if (port == null || port == "") {
   port = 8900;
